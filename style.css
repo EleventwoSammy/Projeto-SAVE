@@ -1,0 +1,162 @@
+html {
+            scroll-behavior: smooth;
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+
+        ::-webkit-scrollbar {
+            display: none;
+        }
+
+        .hero-bg {
+            background-image: linear-gradient(rgba(13, 36, 59, 0.4), rgba(13, 36, 59, 0.8)), url('https://i.pinimg.com/736x/b6/6d/16/b66d1666019c922807e13288bc79b7df.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+
+        .placeholder-box {
+            width: 100%;
+            background-color: rgba(243, 244, 246, 0.6);
+            border: 2px dashed #9ca3af;
+            border-radius: 1rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            color: #475569;
+            padding: 2rem;
+            margin: 1.5rem 0;
+            transition: all 0.3s ease;
+        }
+
+        .step-icon {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 3rem;
+            height: 3rem;
+            background-color: #0D243B;
+            color: white;
+            border-radius: 9999px;
+            font-weight: bold;
+            flex-shrink: 0;
+            z-index: 10;
+            border: 4px solid white;
+        }
+
+        .nav-text-shadow {
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+        }
+
+        #logo-text {
+            transition: max-width 0.6s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.4s ease;
+            max-width: 300px;
+            opacity: 1;
+        }
+
+        #logo-text span {
+            transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+            transform: translateX(0);
+            display: inline-block;
+        }
+
+        nav.scrolled #logo-text {
+            max-width: 0;
+            opacity: 0;
+            padding-left: 0;
+        }
+
+        nav.scrolled #logo-text span {
+            transform: translateX(-100%);
+        }
+
+        @media (min-width: 768px) {
+            #desktop-links {
+                transition: max-width 0.6s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.4s ease;
+                max-width: 800px;
+                opacity: 1;
+            }
+
+            .link-inner {
+                transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+                transform: translateX(0);
+            }
+
+            nav.scrolled #desktop-links {
+                max-width: 0;
+                opacity: 0;
+            }
+
+            nav.scrolled .link-inner {
+                transform: translateX(50%);
+            }
+        }
+
+        .animate-fade-up {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: opacity 1s cubic-bezier(0.25, 1, 0.5, 1), transform 1s cubic-bezier(0.25, 1, 0.5, 1);
+        }
+
+        .animate-slide-left {
+            opacity: 0;
+            transform: translateX(60px);
+            transition: all 1s cubic-bezier(0.25, 1, 0.5, 1);
+        }
+
+        .animate-slide-right-from-border {
+            opacity: 0;
+            transform: translateX(-100%);
+            transition: all 1.2s cubic-bezier(0.25, 1, 0.5, 1);
+        }
+
+        .animate-shrink-bar {
+            width: 100%;
+            max-width: 400px;
+            transition: width 1s cubic-bezier(0.25, 1, 0.5, 1);
+        }
+
+        .animate-slide-up-title {
+            opacity: 0;
+            transform: translateY(100%);
+            transition: all 1s cubic-bezier(0.25, 1, 0.5, 1);
+        }
+
+        .animate-slide-right-title {
+            opacity: 0;
+            transform: translateX(-100%);
+            transition: all 1s cubic-bezier(0.25, 1, 0.5, 1);
+        }
+
+        .animate-icon-shrink {
+            transform: scale(1.6);
+            transition: transform 1s cubic-bezier(0.34, 1.56, 0.64, 1);
+        }
+
+        .animate-reveal-from-icon {
+            opacity: 0;
+            transform: translateX(-100%);
+            transition: all 1s cubic-bezier(0.25, 1, 0.5, 1);
+        }
+
+        .animate-drop-in {
+            opacity: 0;
+            transform: translateY(-40px);
+            transition: all 1s cubic-bezier(0.34, 1.56, 0.64, 1);
+        }
+
+        .animate-slide-out-from-icon {
+            opacity: 0;
+            transform: translateX(-40px);
+            transition: all 1s cubic-bezier(0.25, 1, 0.5, 1);
+        }
+
+        .is-visible {
+            opacity: 1;
+            transform: translate(0, 0);
+        }
+
+        .animate-shrink-bar.is-visible {
+            width: 6rem;
+        }

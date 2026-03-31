@@ -1,0 +1,1741 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projeto SAVE | Engenharia Mecânica FEI</title>
+
+    <link rel="icon" type="image/png" href="/IMAGENS/LOGO/logo azul claro.png">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Configuração de cores -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        policenavy: '#0D243B',
+                        policeblue: '#0D243B',
+                        safetyyellow: '#730F1A',
+                        darkcherry: '#4A0A11',
+                        skyblue: '#A7CADF',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="bg-gray-50 text-gray-800 font-sans antialiased">
+
+    <!-- NAVBAR -->
+    <nav class="fixed w-full z-50 transition-all duration-300 bg-policenavy text-white shadow-2xl shadow-black/50"
+        id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <a href="#inicio" class="flex-shrink-0 flex items-center gap-3 cursor-pointer">
+
+                    <img src="/IMAGENS/LOGO/logo vermelho.png" alt="Logo Projeto Save" class="h-8 w-auto">
+
+                    <div id="logo-text" class="overflow-hidden whitespace-nowrap">
+                        <span class="font-bold text-xl tracking-wider uppercase">Projeto<span
+                                class="text-safetyyellow">Save</span></span>
+                    </div>
+                </a>
+
+                <div id="nav-right" class="flex items-center">
+                    <div id="desktop-links" class="hidden md:flex space-x-8 items-center mr-4">
+                        <a href="#contexto"
+                            class="hover:text-safetyyellow transition-colors font-medium">Contextualização e
+                            Problema</a>
+                        <a href="#solucao" class="hover:text-safetyyellow transition-colors font-medium">Solução</a>
+                        <a href="#documentos"
+                            class="hover:text-safetyyellow transition-colors font-medium">Documentos</a>
+                        <a href="#contato"
+                            class="px-4 py-2 bg-safetyyellow text-white font-bold rounded hover:bg-[#5a0c14] transition-colors">Contatos</a>
+                    </div>
+                    <button id="mobile-menu-btn" class="md:hidden text-white focus:outline-none"><i
+                            class="fa-solid fa-bars text-2xl"></i></button>
+                </div>
+            </div>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden bg-policenavy pb-4 px-4 shadow-xl">
+            <a href="#inicio" class="block py-2 hover:text-safetyyellow">Início</a>
+            <a href="#contexto" class="block py-2 hover:text-safetyyellow">O Problema</a>
+            <a href="#solucao" class="block py-2 hover:text-safetyyellow">A Solução</a>
+            <a href="#contato" class="block py-2 text-safetyyellow font-bold">Fale Conosco</a>
+        </div>
+    </nav>
+
+    <!-- HERO --------------------------------------------->
+    <header id="inicio" class="hero-bg min-h-screen flex items-center justify-center pt-20">
+        <div class="text-center px-4 max-w-5xl mx-auto bg-black/50 p-8 rounded-2xl backdrop-blur-sm reveal-trigger">
+            <div
+                class="inline-block px-4 py-1 mb-6 border border-[#B8C3C7] text-[#B8C3C7] rounded-full text-sm font-semibold tracking-wide uppercase animate-fade-up">
+                Engenharia mecanica automobilistica FEI 2026
+            </div>
+            <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold text-white mb-6 leading-tight animate-fade-up"
+                style="transition-delay: 0.2s;">
+                Sistema de suspensão <span class="text-safetyyellow">anti-tombamento</span> <br class="hidden md:block">
+                em condições de aceleração lateral indesejada.
+            </h1>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center animate-fade-up" style="transition-delay: 0.4s;">
+                <a href="#contexto"
+                    class="px-8 py-4 bg-safetyyellow text-white font-bold rounded-lg hover:bg-[#5a0c14] transition-colors text-lg shadow-lg">Conheça
+                    o Projeto</a>
+                <a href="#solucao"
+                    class="px-8 py-4 bg-transparent border-2 border-white text-white font-bold rounded-lg hover:bg-white hover:text-policenavy transition-colors text-lg">Ver
+                    Metodologia</a>
+            </div>
+        </div>
+    </header>
+
+    <div class="w-full bg-[#00427A] py-5 flex justify-center items-center shadow-lg relative z-20">
+        <img src="https://fei.edu.br/sites/manualdamarca/images/logo8.png" alt="Logo FEI" class="h-10 w-auto">
+    </div>
+
+    <!-- MOTIVAÇÃO E CONTEXTUALIZAÇÃO -->
+    <div class="bg-gradient-to-b from-white via-[#A7CADF] to-[#325978]">
+        <section id="contexto" class="py-20 overflow-hidden">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+                <div class="text-center mb-16 reveal-trigger">
+                    <div
+                        class="max-w-5xl mx-auto bg-[#A7CADF]/20 backdrop-blur-md border border-[#A7CADF]/40 rounded-3xl p-10 shadow-xl mb-16 animate-fade-up">
+                        <h2 class="text-3xl font-bold text-policenavy mb-4 uppercase">Motivação</h2>
+                        <div class="w-20 h-1 bg-safetyyellow mx-auto mb-6"></div>
+                        <p class="text-xl md:text-2xl text-gray-800 font-medium leading-relaxed">
+                            Este projeto visa <strong>aumentar a segurança de viaturas policiais contra tombamentos e
+                                capotamentos em manobras que induzem níveis elevados de aceleração lateral</strong>.
+                        </p>
+                    </div>
+
+
+                    <!-- ========================= -->
+                    <!-- 
+
+
+                    <h2 class="text-sm font-bold text-safetyyellow tracking-widest uppercase mb-2 animate-fade-up">O
+                        Problema</h2>
+                    <div class="overflow-hidden pb-1 mt-2">
+                        <h3 class="text-3xl md:text-4xl font-bold text-policenavy animate-slide-up-title">
+                            Contextualização e Problema</h3>
+                    </div>
+                    <div class="h-1 bg-safetyyellow mx-auto mt-4 mb-8 animate-shrink-bar"></div>
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-12 items-stretch reveal-trigger">
+                    <div
+                        class="flex flex-col space-y-6 text-gray-800 text-lg leading-relaxed text-justify animate-fade-up">
+                        <p>Nos últimos 3 anos, mais de 188 mil acidentes foram registrados em todo o Brasil, segundo
+                            Dados Abertos da Polícia Rodoviária Federal, sendo 17% destes acidentes classificados como
+                            tombamento.</p>
+                        <div class="shadow-xl rounded-2xl overflow-hidden bg-white">
+                            <img src="assets/images/grafico1.png" alt="Gráfico 1" class="w-full h-auto">
+                        </div>
+                    </div>
+
+                    <div class="flex flex-col space-y-6 text-gray-800 text-lg leading-relaxed text-justify animate-fade-up"
+                        style="transition-delay: 0.2s;">
+                        <p>A principal característica deste tipo de acidente é o índice de gravidade, uma vez que
+                            <strong>34% das pessoas envolvidas foram gravemente lesionadas ou vieram a óbito</strong>.
+                            Cerca de 4 mil tombamentos ocorreram com veículos classificados como Caminhonetes,
+                            Camionetas e Utilitários, esses que possuem uma altura de centro de gravidade maior quando
+                            comparados a outras categorias de veículos.
+                        </p>
+                        <p>Através de uma análise de causa utilizando o banco de dados abertos da Polícia Rodoviária
+                            Federal, é possível concluir que uma das principais causas do tombamento é a
+                            <strong>Velocidade Incompatível com a via</strong>, levando o veículo a uma aceleração
+                            lateral indesejada. O Cenário de velocidade incompatível é cotidiano na jornada de um
+                            profissional da segurança pública, dada a natureza do seu trabalho. (TROCAR PARA GRÁFICO 2)
+                        </p>
+                        <div class="shadow-xl rounded-2xl overflow-hidden bg-white">
+                            <img src="/IMAGENS/IMAGENS DOS TRABALHOS/Gráfico 2.pdf" alt="Gráfico 2"
+                                class="w-full h-auto">
+                        </div>
+                    </div>
+                </div>
+ -->
+
+
+                    <meta charset="UTF-8">
+                    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                    <title>Contextualização e Problema - Segurança Viária</title>
+                    <script src="https://cdn.tailwindcss.com"></script>
+                    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+                    <script>
+                        tailwind.config = {
+                            theme: {
+                                extend: {
+                                    colors: {
+                                        azulClaro: '#A7CADF',
+                                        azulMedio: '#325978',
+                                        azulEscuro: '#0D243B',
+                                        cinza: '#B8C3C7',
+                                        vermelho: '#730F1A',
+                                        policenavy: '#0D243',
+
+                                    }
+                                }
+                            }
+                        }
+                    </script>
+                    <style>
+                        @keyframes fade-up {
+                            from {
+                                opacity: 0;
+                                transform: translateY(20px);
+                            }
+
+                            to {
+                                opacity: 1;
+                                transform: translateY(0);
+                            }
+                        }
+
+                        @keyframes slide-up-title {
+                            from {
+                                transform: translateY(100%);
+                            }
+
+                            to {
+                                transform: translateY(0);
+                            }
+                        }
+
+                        @keyframes shrink-bar {
+                            from {
+                                width: 0;
+                            }
+
+                            to {
+                                width: 100%;
+                            }
+                        }
+
+                        .animate-fade-up {
+                            animation: fade-up 0.8s ease-out forwards;
+                        }
+
+                        .animate-slide-up-title {
+                            animation: slide-up-title 0.8s ease-out forwards;
+                        }
+
+                        .animate-shrink-bar {
+                            animation: shrink-bar 1s ease-in-out forwards;
+                        }
+
+                        canvas {
+                            max-height: 450px;
+                            width: 100% !important;
+                        }
+                    </style>
+                    </head>
+
+                    <body class="bg-gray-50 font-sans">
+
+                        <section class="max-w-4xl mx-auto px-6 py-16">
+                            <!-- Cabeçalho da Seção -->
+                            <div class="text-center mb-12">
+                                <h2
+                                    class="text-sm font-bold text-azulMedio tracking-widest uppercase mb-2 animate-fade-up">
+                                    O Problema
+                                </h2>
+                                <div class="overflow-hidden pb-1 mt-2">
+                                    <h3 class="text-3xl md:text-5xl font-bold text-azulEscuro animate-slide-up-title">
+                                        Contextualização e Problema
+                                    </h3>
+                                </div>
+                                <div class="h-1 bg-azulMedio max-w-[200px] mx-auto mt-4 mb-8 animate-shrink-bar"></div>
+                            </div>
+
+                            <!-- Conteúdo em Coluna Única -->
+                            <div class="flex flex-col space-y-12">
+
+                                <!-- Texto Parte 1 -->
+                                <div class="text-gray-800 text-lg leading-relaxed text-justify animate-fade-up">
+                                    <p>Nos últimos 3 anos, mais de <strong>188 mil acidentes</strong> foram registrados
+                                        em todo o Brasil, segundo Dados Abertos da Polícia Rodoviária Federal, sendo 17%
+                                        destes acidentes classificados como tombamento.</p>
+                                </div>
+
+                                <!-- Gráfico 1 -->
+                                <div class="bg-white p-6 rounded-2xl shadow-xl animate-fade-up border border-gray-100">
+                                    <div class="mb-4">
+                                        <h4 class="text-lg font-bold text-azulEscuro">Gráfico 1: Quantidade de acidentes
+                                            registrados nos últimos 3 anos por tipo de acidente</h4>
+                                        <p class="text-xs text-gray-500 italic">Fonte: Dados Abertos - PRF, 2025</p>
+                                    </div>
+                                    <div class="relative h-[400px]">
+                                        <canvas id="grafico1"></canvas>
+                                    </div>
+                                </div>
+
+                                <!-- Texto Parte 2 -->
+                                <div class="text-gray-800 text-lg leading-relaxed text-justify animate-fade-up"
+                                    style="animation-delay: 0.2s;">
+                                    <p>A principal característica deste tipo de acidente é o índice de gravidade, uma
+                                        vez que
+                                        <span class="text-vermelho font-bold">34% das pessoas envolvidas foram
+                                            gravemente lesionadas ou vieram a óbito</span>.
+                                        Cerca de 4 mil tombamentos ocorreram com veículos classificados como
+                                        Caminhonetes, Camionetas e Utilitários, esses que possuem uma altura de centro
+                                        de gravidade maior quando comparados a outras categorias de veículos.
+                                    </p>
+                                    <p class="mt-6">Através de uma análise de causa utilizando o banco de dados abertos
+                                        da Polícia Rodoviária Federal, é possível concluir que uma das principais causas
+                                        do tombamento é a <strong>Velocidade Incompatível com a via</strong>, levando o
+                                        veículo a uma aceleração lateral indesejada. O cenário de velocidade
+                                        incompatível é cotidiano na jornada de um profissional da segurança pública,
+                                        dada a natureza do seu trabalho.</p>
+                                </div>
+
+                                <!-- Gráfico 2 -->
+                                <div class="bg-white p-6 rounded-2xl shadow-xl animate-fade-up border border-gray-100"
+                                    style="animation-delay: 0.4s;">
+                                    <div class="mb-4">
+                                        <h4 class="text-lg font-bold text-azulEscuro">Gráfico 2: Contagem de acidentes
+                                            por causa do acidente</h4>
+                                        <p class="text-xs text-gray-500 italic">Fonte: Dados Abertos - PRF, 2025</p>
+                                    </div>
+                                    <div class="relative h-[400px]">
+                                        <canvas id="grafico2"></canvas>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </section>
+
+                        <script>
+                            // Configurações comuns
+                            const commonOptions = {
+                                indexAxis: 'y',
+                                responsive: true,
+                                maintainAspectRatio: false,
+                                plugins: {
+                                    legend: { display: false }
+                                },
+                                scales: {
+                                    x: {
+                                        grid: { color: '#E5E7EB' },
+                                        ticks: { color: '#6B7280', font: { size: 10 } }
+                                    },
+                                    y: {
+                                        grid: { display: false },
+                                        ticks: { color: '#0D243B', font: { size: 11, weight: '500' } }
+                                    }
+                                }
+                            };
+
+                            // Gráfico 1: Tipo de Acidente
+                            const ctx1 = document.getElementById('grafico1').getContext('2d');
+                            new Chart(ctx1, {
+                                type: 'bar',
+                                data: {
+                                    labels: [
+                                        'Colisão traseira',
+                                        'Saída de leito carroçável',
+                                        'Colisão lateral mesmo sentido',
+                                        'Tombamento',
+                                        'Colisão transversal',
+                                        'Colisão com objeto',
+                                        'Colisão frontal',
+                                        'Capotamento',
+                                        'Queda de ocupante de veículo',
+                                        'Outros (OMI)'
+                                    ],
+                                    datasets: [{
+                                        data: [36500, 34000, 32500, 31980, 18000, 14000, 10000, 6000, 4000, 1140],
+                                        backgroundColor: '#325978',
+                                        borderRadius: 4,
+                                        barThickness: 20
+                                    }]
+                                },
+                                options: {
+                                    ...commonOptions,
+                                    scales: {
+                                        ...commonOptions.scales,
+                                        x: {
+                                            ...commonOptions.scales.x,
+                                            max: 40000,
+                                            ticks: {
+                                                stepSize: 10000,
+                                                callback: value => value / 1000 + ' Mil'
+                                            }
+                                        }
+                                    }
+                                }
+                            });
+
+                            // Gráfico 2: Causa do Acidente
+                            const ctx2 = document.getElementById('grafico2').getContext('2d');
+                            new Chart(ctx2, {
+                                type: 'bar',
+                                data: {
+                                    labels: [
+                                        'Reação tardia ou ineficiente do condutor',
+                                        'Ausência de reação do condutor',
+                                        'Velocidade Incompatível',
+                                        'Acessar a via sem observar presença...',
+                                        'Demais falhas mecânicas ou elétricas',
+                                        'Manobra de mudança de faixa',
+                                        'Condutor Dormindo',
+                                        'Ingestão de álcool pelo condutor',
+                                        'Deixou de manter distância segura'
+                                    ],
+                                    datasets: [{
+                                        data: [3200, 2700, 2200, 900, 800, 750, 720, 710, 650],
+                                        backgroundColor: '#A7CADF',
+                                        hoverBackgroundColor: '#730F1A',
+                                        borderRadius: 4,
+                                        barThickness: 20
+                                    }]
+                                },
+                                options: {
+                                    ...commonOptions,
+                                    scales: {
+                                        ...commonOptions.scales,
+                                        x: {
+                                            ...commonOptions.scales.x,
+                                            max: 3500,
+                                            ticks: { stepSize: 500 }
+                                        }
+                                    }
+                                }
+                            });
+                        </script>
+
+
+
+                        <!-- ============================ -->
+
+
+
+                        <div class="mt-16 text-gray-800 text-lg reveal-trigger">
+                            <p class="mb-10 animate-fade-up text-justify">Analisando a frota de viaturas no Brasil, é
+                                possível
+                                perceber uma alta incidência das categorias com alto centro de gravidade, por
+                                proporcionarem
+                                entre outras coisas, conforto, ergonomia no embarque e desembarque, capacidade de carga,
+                                vão
+                                livre do solo maior, e maior possibilidade de instalação de equipamentos embarcados.
+                            </p>
+                            <div class="animate-slide-left shadow-2xl rounded-3xl overflow-hidden bg-white">
+                                <img src="/IMAGENS/IMAGENS DOS TRABALHOS/GRAFICO POWER BI.png" alt="Gráfico 3"
+                                    class="w-full h-auto">
+                            </div>
+
+                            <p class="mt-10 mb-10 animate-fade-up text-justify">Sendo assim, um grande alerta é gerado
+                                para a
+                                preservação dos seres humanos que atendem a população a bordo de viaturas, sendo
+                                possível
+                                verificar a problemática também através de exemplos de acontecimentos registrados pela
+                                mídia
+                                brasileira nos últimos cinco anos.</p>
+
+                            <!-- CARROSSEL -->
+                            <div id="image-carousel"
+                                class="relative w-full h-80 md:h-[450px] bg-black rounded-3xl overflow-hidden shadow-2xl animate-fade-up group">
+                                <div id="carousel-track"
+                                    class="flex w-full h-full transition-transform duration-700 ease-in-out">
+                                    <div class="w-full h-full flex-shrink-0 relative">
+                                        <img src="assets/images/Figura 1.png" class="w-full h-full object-cover">
+                                        <div class="absolute bottom-0 left-0 w-full p-8 md:p-12 ">
+                                            <!-- <h4 class="text-white font-bold text-xl md:text-2xl">Exemplos de acidentes com
+                                        viaturas policiais na mídia.</h4> -->
+                                        </div>
+                                    </div>
+                                    <div class="w-full h-full flex-shrink-0 relative">
+                                        <img src="assets/images/Figura 2.png" class="w-full h-full object-cover">
+                                        <div class="absolute bottom-0 left-0 w-full p-8 md:p-12 ">
+                                            <!-- <h4 class="text-white font-bold text-xl md:text-2xl">Trabalho contínuo para redução
+                                        de gravidade em acidentes.</h4> -->
+                                        </div>
+                                    </div>
+                                </div>
+                                <button id="btn-prev"
+                                    class="absolute top-1/2 left-4 -translate-y-1/2 w-12 h-12 flex items-center justify-center bg-white/20 text-white rounded-full opacity-0 group-hover:opacity-100 transition-all hover:bg-safetyyellow"><i
+                                        class="fa-solid fa-chevron-left"></i></button>
+                                <button id="btn-next"
+                                    class="absolute top-1/2 right-4 -translate-y-1/2 w-12 h-12 flex items-center justify-center bg-white/20 text-white rounded-full opacity-0 group-hover:opacity-100 transition-all hover:bg-safetyyellow"><i
+                                        class="fa-solid fa-chevron-right"></i></button>
+                            </div>
+                        </div>
+                </div>
+        </section>
+    </div>
+
+    <!-- ================================================================ -->
+        <!-- INÍCIO: CONTEXTUALIZAÇÃO TEÓRICA -->
+        <!-- ================================================================ -->
+        <section id="teoria" class="py-10 md:py-20 bg-policenavy text-white overflow-hidden">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 reveal-trigger">
+                <div class="mb-12">
+                    <div class="overflow-hidden pb-1">
+                        <h2 class="text-3xl font-bold animate-slide-right-title uppercase">Contextualização teórica</h2>
+                    </div>
+                    <div class="h-1 bg-safetyyellow mt-2 mb-8 animate-shrink-bar-left w-full"></div>
+                    
+                    <!-- Bloco 1: Tombamento (Texto na Esquerda, Imagem na Direita) -->
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center mb-16">
+                        <!-- Texto -->
+                        <div class="text-gray-200 text-lg leading-relaxed text-justify animate-fade-up">
+                            <p class="mb-4">
+                                Tendo a relevância do tema introduzida e contextualizada é de extrema importância definir o conceito do tombamento, portanto, segundo Gillespie (2021, p.249):
+                            </p>
+                            
+                            <!-- Citação elegante -->
+                            <blockquote class="border-l-4 border-skyblue bg-policeblue p-5 rounded-r-xl italic text-gray-300 shadow-inner mb-4">
+                                “Tombamento pode ser definido como qualquer manobra em que o veículo rotacione 90 graus ou mais em relação ao seu eixo longitudinal, de forma que a carroceria entre em contato com o solo”.
+                            </blockquote>
+                        </div>
+                        
+                        <!-- Imagem 1 no Card Branco -->
+                        <div class="bg-white rounded-2xl shadow-lg overflow-hidden flex items-center justify-center border border-white/10 group animate-fade-up">
+                            <!-- O p-4 (padding) e object-contain garantem que a imagem preencha bem sem cortar -->
+                            <img src="/IMAGENS/IMAGENS DOS TRABALHOS/Figura 3.png" alt="Eixos do veículo" class="w-full h-auto max-h-[350px] object-contain p-4 group-hover:scale-105 transition-transform duration-500">
+                        </div>
+                    </div>
+
+                    <!-- Bloco 2: Aceleração Lateral Limite (Imagem na Esquerda, Texto na Direita) -->
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center">
+                        
+                        <!-- Imagem 2 no Card Branco (Usa order-last no celular para o texto vir primeiro) -->
+                        <div class="order-2 md:order-1 bg-white rounded-2xl shadow-lg overflow-hidden flex items-center justify-center border border-white/10 group animate-fade-up">
+                            <img src="/IMAGENS/IMAGENS DOS TRABALHOS/Figura 4.png" alt="Aceleração Lateral" class="w-full h-auto max-h-[350px] object-contain p-4 group-hover:scale-105 transition-transform duration-500">
+                        </div>
+                        
+                        <!-- Texto -->
+                        <div class="order-1 md:order-2 text-gray-200 text-lg leading-relaxed text-justify animate-fade-up">
+                            <p class="mb-4">
+                                De mesma importância, e segundo Gillespie (2021, p.249):
+                            </p>
+                            
+                            <!-- Citação elegante -->
+                            <blockquote class="border-l-4 border-skyblue bg-policeblue p-5 rounded-r-xl italic text-gray-300 shadow-inner mb-6">
+                                “Aceleração Lateral Limite representa o valor de aceleração lateral que, quando superado, leva o veículo ao fenômeno do tombamento”.
+                            </blockquote>
+                            
+                            <p>
+                                Representada em imagem abaixo está o vetor de aceleração lateral.
+                            </p>
+                        </div>
+                    </div>
+
+               
+        <!-- ================= FIM: CONTEXTUALIZAÇÃO TEÓRICA ================= -->
+                </div>
+            </div>
+        </div>
+
+        
+        <!-- INÍCIO: ANÁLISE DE MERCADO (Tabelas 1 e 2) -->
+        <!-- ================================================================ -->
+        <section id="mercado" class="py-10 md:py-20 bg-policenavy text-white overflow-hidden">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 reveal-trigger">
+                
+                <div class="overflow-hidden pb-1">
+                    <h2 class="text-3xl font-bold animate-slide-right-title uppercase">Análise de mercado</h2>
+                </div>
+                <div class="h-1 bg-safetyyellow mt-2 mb-8 animate-shrink-bar-left w-full"></div>
+                
+                <p class="text-gray-200 text-lg leading-relaxed text-justify mb-12 animate-fade-up">
+                    Segundo os contratos de licitação encontrados nos dados abertos da PRF, sendo eles de 2023, 2024 e 2025 é possível
+                    determinar um custo médio para a aquisição dos veículos. Olhando apenas para o foco deste projeto
+                    (caminhonetes, camionetas e utilitários) o valor de <strong class="text-white font-black">R$ 303.404,19</strong> representa o valor médio de aquisição dos veículos dessas categorias.
+                </p>
+                
+                <!-- TABELA 1 -->
+                <div class="mb-16">
+                    <h3 class="text-xl font-bold text-white mb-4">Tabela 1: Licitações de órgãos de segurança pública</h3>
+                    
+                    <div class="bg-skyblue rounded-xl shadow-lg overflow-hidden">
+                        <div class="overflow-x-auto custom-scrollbar">
+                            <table class="w-full text-sm md:text-base text-left border-collapse min-w-[700px]">
+                                <thead class="bg-policeblue text-white text-xs uppercase tracking-wider">
+                                    <tr>
+                                        <th class="px-6 py-4 text-center border-r border-white/20">Veículo</th>
+                                        <th class="px-4 py-4 text-center border-r border-white/20">Quantidade</th>
+                                        <th class="px-4 py-4 text-center border-r border-white/20">Valor Total</th>
+                                        <th class="px-4 py-4 text-center border-r border-white/20">Percentual</th>
+                                        <th class="px-4 py-4 text-center">Valor Médio</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="text-policenavy font-medium">
+                                    <tr class="border-b border-policenavy/10 hover:bg-white/10 transition-colors">
+                                        <td class="px-6 py-3 border-r border-policenavy/10">
+                                            <div class="flex items-center gap-3">
+                                                <div class="w-3 h-3 rounded-full bg-safetyyellow flex-shrink-0"></div>
+                                                <span>Caminhonete</span>
+                                            </div>
+                                        </td>
+                                        <td class="px-4 py-3 text-center border-r border-policenavy/10">1.442</td>
+                                        <td class="px-4 py-3 text-center border-r border-policenavy/10">R$ 432.097.855,74</td>
+                                        <td class="px-4 py-3 text-center border-r border-policenavy/10">43,95%</td>
+                                        <td class="px-4 py-3 text-center">R$ 299.651,77</td>
+                                    </tr>
+                                    <tr class="border-b border-policenavy/10 hover:bg-white/10 transition-colors">
+                                        <td class="px-6 py-3 border-r border-policenavy/10">
+                                            <div class="flex items-center gap-3">
+                                                <div class="w-3 h-3 rounded-full bg-safetyyellow flex-shrink-0"></div>
+                                                <span>Camioneta / SUV</span>
+                                            </div>
+                                        </td>
+                                        <td class="px-4 py-3 text-center border-r border-policenavy/10">206</td>
+                                        <td class="px-4 py-3 text-center border-r border-policenavy/10">R$ 67.912.249,08</td>
+                                        <td class="px-4 py-3 text-center border-r border-policenavy/10">6,28%</td>
+                                        <td class="px-4 py-3 text-center">R$ 329.671,11</td>
+                                    </tr>
+                                    <tr class="border-b border-policenavy/10 hover:bg-white/10 transition-colors">
+                                        <td class="px-6 py-3 border-r border-policenavy/10">
+                                            <div class="flex items-center gap-3">
+                                                <div class="w-3 h-3 rounded-full bg-safetyyellow flex-shrink-0"></div>
+                                                <span>Automóveis</span>
+                                            </div>
+                                        </td>
+                                        <td class="px-4 py-3 text-center border-r border-policenavy/10">1.633</td>
+                                        <td class="px-4 py-3 text-center border-r border-policenavy/10">R$ 278.123.656,29</td>
+                                        <td class="px-4 py-3 text-center border-r border-policenavy/10">49,77%</td>
+                                        <td class="px-4 py-3 text-center">R$ 170.314,55</td>
+                                    </tr>
+                                    <tr class="hover:bg-white/10 transition-colors font-bold">
+                                        <td class="px-6 py-3 border-r border-policenavy/10">
+                                            <div class="flex items-center gap-3">
+                                                <div class="w-3 h-3 rounded-full bg-transparent flex-shrink-0"></div>
+                                                <span>Total</span>
+                                            </div>
+                                        </td>
+                                        <td class="px-4 py-3 text-center border-r border-policenavy/10">3.281</td>
+                                        <td class="px-4 py-3 text-center border-r border-policenavy/10">R$ 778.133.761,11</td>
+                                        <td class="px-4 py-3 text-center border-r border-policenavy/10">100,00%</td>
+                                        <td class="px-4 py-3 text-center">R$ 303.404,19</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="bg-policenavy/10 border-t border-policenavy/20 px-6 py-3 text-right text-xs font-bold text-policenavy">
+                            Fonte: Autores, Dados Abertos PRF, 2025.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Textos Intermediários -->
+                <p class="text-gray-200 text-lg leading-relaxed text-justify mt-8 animate-fade-up italic">
+                    Foi realizado também o cálculo do custo social relacionado às pessoas com base em estudos do IPEA, DENATRAN e
+                    ANTP, juntamente a outros estudos e relatórios oficiais a respeito das forças de segurança pública do país.
+                </p>
+                <div class="bg-white/5 border border-white/10 rounded-2xl p-6 mt-6 mb-12 animate-fade-up">
+                    <p class="text-gray-300">
+                        O Resultado obtido representa apenas custos por perda de produção bruta e custos de atendimento hospitalar, desconsiderando danos materiais ou ao ambiente, benefícios previdenciários por licença médica pagos à família, assistência à família em caso de morte do policial, seguro de vida, entre outros.
+                    </p>
+                </div>
+
+                <!-- TABELA 2 -->
+                <div>
+                    <div class="mb-6">
+                        <h3 class="text-xl font-bold text-white mb-2">
+                            Tabela 2: Estimativa de custos por policial ferido leve, grave, ou morto em um acidente de trânsito com e sem fatalidade
+                        </h3>
+                        <p class="text-sm text-skyblue mt-1 font-medium">
+                            (Valores atualizados pelo IPCA para 12/2025)
+                        </p>
+                    </div>
+
+                    <div class="bg-skyblue rounded-xl shadow-lg border border-white/20 overflow-hidden">
+                        <div class="overflow-x-auto custom-scrollbar">
+                            <table class="w-full text-left border-collapse min-w-[700px]">
+                                <thead class="bg-policeblue text-white text-xs uppercase tracking-widest">
+                                    <tr>
+                                        <th class="py-5 px-6 font-bold border-b border-white/10 border-r border-white/20"></th>
+                                        <th class="py-5 px-6 font-bold border-b border-white/10 border-r border-white/20 text-center">Acidente sem fatalidade</th>
+                                        <th class="py-5 px-6 font-bold border-b border-white/10 text-center">Acidente com fatalidade</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="divide-y divide-policenavy/10 text-policenavy font-medium">
+                                    <tr class="hover:bg-white/10 transition-colors duration-200">
+                                        <td class="py-4 px-6 border-r border-policenavy/10 whitespace-nowrap">
+                                            <div class="flex items-center gap-3">
+                                                <div class="w-3 h-3 rounded-full bg-[#b91c1c] shadow-sm flex-shrink-0"></div>
+                                                <span class="font-bold">Custo médio por policial ferido leve:</span>
+                                            </div>
+                                        </td>
+                                        <td class="py-4 px-6 whitespace-nowrap text-center border-r border-policenavy/10 font-semibold text-lg">R$ 16.654,67</td>
+                                        <td class="py-4 px-6 whitespace-nowrap text-center font-semibold text-lg">R$ 16.765,66</td>
+                                    </tr>
+                                    <tr class="hover:bg-white/10 transition-colors duration-200">
+                                        <td class="py-4 px-6 border-r border-policenavy/10 whitespace-nowrap">
+                                            <div class="flex items-center gap-3">
+                                                <div class="w-3 h-3 rounded-full bg-safetyyellow shadow-sm flex-shrink-0"></div>
+                                                <span class="font-bold">Custo médio por policial ferido grave:</span>
+                                            </div>
+                                        </td>
+                                        <td class="py-4 px-6 whitespace-nowrap text-center border-r border-policenavy/10 font-semibold text-lg">R$ 265.655,36</td>
+                                        <td class="py-4 px-6 whitespace-nowrap text-center font-semibold text-lg">R$ 321.711,08</td>
+                                    </tr>
+                                    <tr class="hover:bg-white/10 transition-colors duration-200">
+                                        <td class="py-4 px-6 border-r border-policenavy/10 whitespace-nowrap">
+                                            <div class="flex items-center gap-3">
+                                                <div class="w-3 h-3 rounded-full bg-darkcherry shadow-sm flex-shrink-0"></div>
+                                                <span class="font-bold">Custo médio por policial morto:</span>
+                                            </div>
+                                        </td>
+                                        <td class="py-4 px-6 whitespace-nowrap text-center border-r border-policenavy/10 italic text-policenavy/50">—</td>
+                                        <td class="py-4 px-6 whitespace-nowrap text-center font-semibold text-lg">R$ 1.173.618,36</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="bg-policenavy/10 border-t border-policenavy/20 px-6 py-3 text-right text-xs font-bold text-policenavy">
+                            Fonte: Autores, 2026.
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+        <!-- ================= FIM: ANÁLISE DE MERCADO ================= -->
+
+
+            
+            <!-- ============================== -->
+
+        
+
+    <!-- PROPÓSITO E GOLDEN CIRCLE -->
+    <section id="solucao" class="pt-20 pb-0 bg-gradient-to-b from-[#325978] to-[#0D243B] text-white">
+        <div
+            class="mb-24 w-[calc(100%-4rem)] mx-auto bg-white/10 backdrop-blur-md border border-white/20 rounded-3xl p-14 text-center reveal-trigger shadow-2xl">
+            <h2 class="text-3xl font-bold mb-6 uppercase">Propósito</h2>
+            <div class="h-1 bg-safetyyellow mx-auto w-24 mb-10 animate-shrink-bar"></div>
+            <div
+                class="max-w-6xl mx-auto bg-black/20 border-l-4 border-safetyyellow rounded-r-2xl p-10 animate-fade-up shadow-inner">
+                <p class="text-gray-300 mb-4 text-lg">Por fim, com o problema definido o projeto terá como propósito de
+                    desenvolvimento o:</p>
+                <strong class="text-1xl md:text-2xl font-bold leading-snug">“Aumento da aceleração lateral limite de
+                    tombamento em manobras de mudança de trajetória”</strong>
+            </div>
+        </div>
+
+        <div class="max-w-7xl mx-auto px-4 text-center reveal-trigger pb-24">
+            <h2 class="text-3xl font-bold mb-4 uppercase">Golden Circle</h2>
+            <div class="h-1 bg-safetyyellow mx-auto w-24 mb-10"></div>
+            <p class="text-gray-300 text-lg max-w-4xl mx-auto mb-10 text-justify md:text-center animate-fade-up">
+                O conceito de Golden Circle proposto por Sinek (2009), é um modelo criado para promover a visualização
+                da motivação por trás de um produto, serviço ou empresa. A ferramenta proporciona uma reflexão sobre
+                qual é a razão de existir do objeto de aplicação, o que é, e como atingirá seu objetivo. O Golden Circle
+                deste projeto pode ser encontrado abaixo.
+            </p>
+
+            <!-- GOLDEN CIRCLE EM CODIGOOOOOOOOOO========================= -->
+
+
+
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Golden Circle - Visual</title>
+            <!-- Tailwind CSS para layout e estilos -->
+            <script src="https://cdn.tailwindcss.com"></script>
+            <style>
+                .circle-container {
+                    position: relative;
+                    width: 100%;
+                    max-width: 480px;
+                    aspect-ratio: 1 / 1;
+                }
+
+                .circle {
+                    position: absolute;
+                    border-radius: 50%;
+                    display: flex;
+                    align-items: flex-start;
+                    justify-content: center;
+                    padding-top: 2.5rem;
+                    transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+                    cursor: pointer;
+                    border: 1px solid rgba(255, 255, 255, 0.05);
+                }
+
+                /* O Quê? - Exterior */
+                .circle-outer {
+                    width: 100%;
+                    height: 100%;
+                    background-color: #325978;
+                    z-index: 10;
+                }
+
+                /* Como? - Meio */
+                .circle-middle {
+                    width: 70%;
+                    height: 70%;
+                    top: 30%;
+                    left: 15%;
+                    background-color: #949494;
+                    z-index: 20;
+                }
+
+                /* Porquê? - Centro */
+                .circle-inner {
+                    width: 42%;
+                    height: 42%;
+                    top: 58%;
+                    left: 29%;
+                    background-color: #730f1a;
+                    z-index: 30;
+                    padding-top: 3.5rem;
+                }
+
+                /* Efeito de destaque sutil no cartão */
+                .card-highlight {
+                    transform: translateY(-6px);
+                    filter: brightness(1.1);
+                    box-shadow: 0 15px 30px -10px rgba(0, 0, 0, 0.4);
+                    z-index: 50;
+                    border-color: rgba(255, 255, 255, 0.2) !important;
+                }
+
+                .circle:hover {
+                    transform: scale(1.02);
+                    filter: brightness(1.08);
+                }
+
+                /* Suavizar a transição dos cartões */
+                .card-transition {
+                    transition: all 0.3s ease-out;
+                }
+            </style>
+
+            <body class="bg-[#1a2a36] p-4 sm:p-10 font-sans antialiased text-white min-h-screen flex items-center">
+
+                <div class="max-w-7xl mx-auto w-full">
+                    <!-- Layout de Grelha: Círculo na Esquerda, Definições na Direita -->
+                    <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20 items-center">
+
+                        <!-- COLUNA ESQUERDA: O Diagrama -->
+                        <div class="lg:col-span-5 flex justify-center lg:justify-start order-1">
+                            <div class="circle-container">
+                                <!-- Círculo O Quê -->
+                                <div id="circle-oque" class="circle circle-outer"
+                                    onmouseover="highlightCard('card-oque')" onmouseout="removeHighlight('card-oque')">
+                                    <span class="text-2xl font-black uppercase tracking-widest text-white/80">O
+                                        Quê?</span>
+                                </div>
+                                <!-- Círculo Como -->
+                                <div id="circle-como" class="circle circle-middle"
+                                    onmouseover="highlightCard('card-como')" onmouseout="removeHighlight('card-como')">
+                                    <span class="text-xl font-bold uppercase tracking-widest text-white/80">Como?</span>
+                                </div>
+                                <!-- Círculo Porquê -->
+                                <div id="circle-porque" class="circle circle-inner"
+                                    onmouseover="highlightCard('card-porque')"
+                                    onmouseout="removeHighlight('card-porque')">
+                                    <span class="text-lg font-bold uppercase tracking-widest text-white">Porquê?</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- COLUNA DIREITA: As Explicações -->
+                        <div class="lg:col-span-7 space-y-5 order-2">
+                            <!-- Card Porquê -->
+                            <div id="card-porque"
+                                class="card-transition bg-[#730f1a] p-7 rounded-2xl border border-white/5 relative">
+                                <h3 class="text-xs font-black uppercase tracking-[0.2em] text-white/50 mb-3">O Propósito
+                                    (Porquê?)</h3>
+                                <p class="text-lg font-semibold leading-snug italic">
+                                    "Nós acreditamos que todos aqueles que nos protegem, também devem ser protegidos."
+                                </p>
+                            </div>
+
+                            <!-- Card Como -->
+                            <div id="card-como"
+                                class="card-transition bg-gray-500 p-6 rounded-2xl border border-white/5">
+                                <h3 class="text-xs font-black uppercase tracking-[0.2em] text-white/50 mb-3">O Processo
+                                    (Como?)</h3>
+                                <p class="text-lg leading-relaxed font-medium">
+                                    Através do aumento da aceleração lateral limite das viaturas para redução de
+                                    tombamentos em condições de mudança de trajetória.
+                                </p>
+                            </div>
+
+                            <!-- Card O Quê -->
+                            <div id="card-oque"
+                                class="card-transition bg-[#325978] p-6 rounded-2xl border border-white/5">
+                                <h3 class="text-xs font-black uppercase tracking-[0.2em] text-white/50 mb-3">O Resultado
+                                    (O Quê?)</h3>
+                                <p class="text-lg leading-relaxed font-medium">
+                                    Um sistema de segurança veicular avançado que diminua drasticamente a tendência ao
+                                    tombamento.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Rodapé -->
+                    <div
+                        class="mt-20 pt-8 border-t border-white/10 flex flex-col sm:flex-row justify-between items-center gap-4 text-white/30 text-sm">
+                        <div class="flex items-center gap-2">
+                            <span class="font-bold text-white/50">Fonte:</span> Autores, 2025
+                        </div>
+                        <div class="flex items-center gap-6">
+                            <span class="uppercase tracking-[0.3em] font-black text-white/10">Projeto SAVE</span>
+                            <span class="font-black tracking-widest text-white/60">FEI</span>
+                        </div>
+                    </div>
+                </div>
+
+                <script>
+                    function highlightCard(cardId) {
+                        const card = document.getElementById(cardId);
+                        if (card) {
+                            card.classList.add('card-highlight');
+                        }
+                    }
+
+                    function removeHighlight(cardId) {
+                        const card = document.getElementById(cardId);
+                        if (card) {
+                            card.classList.remove('card-highlight');
+                        }
+                    }
+                </script>
+
+
+
+
+                <!-- <div class="placeholder-box border-white/20 h-80 animate-fade-up">
+                <i class="fa-solid fa-circle-nodes text-4xl mb-4 opacity-30"></i>
+                <img src="/IMAGENS/IMAGENS DOS TRABALHOS/Figura Golden Circle.pdf" alt="">
+                <span class="font-bold text-white">Imagem 7: Diagrama do Golden Circle</span>
+                <span class="text-xs text-center opacity-50 mt-2">(Why, How, What)</span>
+            </div> -->
+        </div>
+
+        <!-- ONDAS 1 -->
+        <div class="w-full overflow-hidden leading-none bg-[#0D243B]">
+            <svg viewBox="0 0 1200 120" preserveAspectRatio="none"
+                class="relative block w-full h-[80px] text-[#3A6586] fill-current">
+                <path
+                    d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V120H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z">
+                </path>
+            </svg>
+        </div>
+    </section>
+
+    <!-- DESENVOLVIMENTO E BENCHMARKING -->
+    <section id="benchmarking"
+        class="bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-[#3A6586] to-[#325978] pb-10">
+        <div class="max-w-7xl mx-auto px-4 py-10 text-white">
+            <div class="mb-20 reveal-trigger">
+                <div class="flex items-center mb-10">
+                    <i class="fa-solid fa-calculator text-safetyyellow text-4xl mr-4 animate-icon-shrink"></i>
+                    <h3 class="text-3xl font-bold animate-reveal-from-icon uppercase">Desenvolvimento matemático</h3>
+                </div>
+                <p class="text-gray-200 text-lg mb-10 animate-fade-up text-justify">Antes de chegar no Benchmarking da
+                    solução, é necessário introduzir o modelo utilizado como base para descrever a aceleração limite ao
+                    tombamento e seus respectivos parâmetros. A aceleração limite ao tombamento pode ser descrita
+                    através de um modelo quase estático da massa suspensa em função de parâmetros do veículo, como
+                    visto na solução analítica abaixo: </p>
+                <div class="grid md:grid-cols-1 gap-8 justify-items-center mb-10">
+                    <!-- ================================================================ -->
+        <!-- INÍCIO: EQUAÇÃO 2 - Razão de Rolagem (Sem Fundo) -->
+        <!-- ================================================================ -->
+        <div class="py-8">
+            <!-- Bloco da Equação -->
+            <div class="flex flex-wrap items-center justify-center space-x-2 md:space-x-4 text-xl md:text-3xl text-white my-6 overflow-x-auto">
+                <!-- Parte 1 -->
+                <div><i>R<sub>&phi;</sub></i> = </div>
+                
+                <!-- Fração 1 -->
+                <div class="flex flex-col items-center">
+                    <div class="border-b-2 border-white px-2 mb-1"><i>d&Phi;</i></div>
+                    <div class="px-2"><i>da</i><sub class="not-italic">y</sub></div>
+                </div>
+                
+                <div> = </div>
+                
+                <!-- Fração 2 -->
+                <div class="flex flex-col items-center">
+                    <div class="border-b-2 border-white px-2 mb-1"><i>W * h<sub>1</sub></i></div>
+                    <div class="px-2">[<i>K<sub>&phi;f</sub> + K<sub>&phi;r</sub> - W * h<sub>1</sub></i>]</div>
+                </div>
+            </div>
+
+            <!-- Legenda das Variáveis - Alinhadas com largura fixa na primeira coluna -->
+            <div class="mt-14 grid grid-cols-[5rem_1fr] md:grid-cols-[6rem_1fr] gap-x-4 gap-y-3 text-gray-300 md:text-lg mx-auto w-fit max-w-full px-4">
+                <div class="text-right whitespace-nowrap"><strong class="text-white text-xl"><i>h<sub>1</sub></i> =</strong></div>
+                <div class="text-left">Altura do centro de gravidade até o Roll Center (<i>h<sub>r</sub></i>) do veículo</div>
+                
+                <div class="text-right whitespace-nowrap"><strong class="text-white text-xl"><i>W</i> =</strong></div>
+                <div class="text-left">Peso (weight) do veículo = Massa suspensa + Massa não suspensa</div>
+                
+                <div class="text-right whitespace-nowrap"><strong class="text-white text-xl"><i>K<sub>&phi;f</sub></i> =</strong></div>
+                <div class="text-left">Rigidez de rolagem do eixo dianteiro (Front axle)</div>
+                
+                <div class="text-right whitespace-nowrap"><strong class="text-white text-xl"><i>K<sub>&phi;r</sub></i> =</strong></div>
+                <div class="text-left">Rigidez de rolagem do eixo traseiro (Rear axle)</div>
+            </div>
+        </div>
+        <!-- ================= FIM: EQUAÇÃO 2 ================= -->
+                </div>
+                <p class="text-gray-200 text-lg mb-10 animate-fade-up text-justify">Para o desenvolvimento da solução,
+                    evitaremos alterar parâmetros cinemáticos do projeto, devido a alta interdependência associada à
+                    eles. Portanto, atuaremos na Razão de rolagem, através do aumento na Rigidez de rolagem de cada
+                    eixo, que interage com a Razão de rolagem matematicamente como visto abaixo: </p>
+
+                 <!-- ================================================================ -->
+        <!-- INÍCIO: EQUAÇÃO 3 - Rigidez Vertical (Sem Fundo) -->
+        <!-- ================================================================ -->
+        <div class="py-8">
+            <!-- Bloco da Equação -->
+            <div class="flex flex-wrap items-center justify-center text-xl md:text-3xl text-white my-6">
+                <div><i>K<sub>&phi;f ou &phi;r</sub></i> = 0.5 * <i>K<sub>sf ou sr</sub></i> * <i>s<sup>2</sup></i></div>
+            </div>
+
+            <!-- Legenda das Variáveis - Alinhadas com largura fixa na primeira coluna -->
+            <div class="mt-14 grid grid-cols-[5rem_1fr] md:grid-cols-[6rem_1fr] gap-x-4 gap-y-3 text-gray-300 md:text-lg mx-auto w-fit max-w-full px-4">
+                <div class="text-right whitespace-nowrap"><strong class="text-white text-xl"><i>K<sub>sf</sub></i> =</strong></div>
+                <div class="text-left">Rigidez vertical de mola do eixo dianteiro (Front axle)</div>
+                
+                <div class="text-right whitespace-nowrap"><strong class="text-white text-xl"><i>K<sub>sr</sub></i> =</strong></div>
+                <div class="text-left">Rigidez vertical de mola do eixo traseiro (Rear axle)</div>
+                
+                <div class="text-right whitespace-nowrap"><strong class="text-white text-xl"><i>s</i> =</strong></div>
+                <div class="text-left">Distância lateral entre molas</div>
+            </div>
+        </div>
+        <!-- ================= FIM: EQUAÇÃO 3 ================= -->
+
+            </div>
+
+       
+        <!-- ================================================================ -->
+        <!-- INÍCIO: SOLUÇÃO - BENCHMARKING (Cards Animados) -->
+        <!-- ================================================================ -->
+        <div class="mb-20 pt-8 reveal-trigger">
+            <div class="flex items-center mb-10">
+                <i class="fa-solid fa-magnifying-glass-chart text-safetyyellow text-4xl mr-4 animate-icon-shrink"></i>
+                <h3 class="text-3xl font-bold text-white uppercase animate-reveal-from-icon">Solução - Benchmarking</h3>
+            </div>
+            
+            <p class="text-gray-200 text-lg mb-12 animate-fade-up text-justify">
+                Visando a atuação na Rigidez de rolagem anteriormente apresentada, foram analisadas soluções atualmente empregadas que atuam tangentes ao problema analisado. São elas:
+            </p>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-12">
+                
+                <!-- CARD 1: ESC -->
+                <div class="flex flex-col group animate-slide-in-tl">
+                    <!-- Título Externo (Acima do Card) -->
+                    <div class="mb-3 flex flex-col md:flex-row md:justify-between md:items-end gap-1 px-1">
+                        <h4 class="font-bold text-white text-lg uppercase drop-shadow-md group-hover:text-skyblue transition-colors duration-300">ESC (Eletronic stability control)</h4>
+                        
+                    </div>
+                    
+                    <!-- Área da Imagem -->
+                    <div class="relative overflow-hidden rounded-2xl border-2 border-skyblue/30 group-hover:border-skyblue transition-colors duration-300 h-[300px] bg-black/20 cursor-pointer flex items-center justify-center p-4 shadow-lg">
+                        <img src="IMAGENS/IMAGENS DOS TRABALHOS/PDF convertido para PNG/Figura 09 cortada.png" alt="ESC" class="w-full h-full object-contain transition-transform duration-700 group-hover:scale-105">
+                        
+                        <!-- Overlay do Hover -->
+                        <div class="absolute inset-0 bg-policenavy/95 backdrop-blur-sm flex flex-col justify-center items-center p-6 text-center opacity-0 group-hover:opacity-100 transition-all duration-500 z-10">
+                            <p class="text-sm md:text-base text-gray-200 leading-relaxed text-justify italic">
+                                É um sistema que atua quando o veículo é submetido a situações de perigo como falta de aderência do pneu ao solo. “A estratégia de controle de estabilidade por frenagem diferencial consiste na aplicação de forças de frenagem distintas entre as rodas do veículo para controlar a rotação yaw” (TRIGINELLI; MORIGUCHI, 2008).
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CARD 2: Suspensão Pneumática -->
+                <div class="flex flex-col group animate-slide-in-tr">
+                    <!-- Título Externo (Acima do Card) -->
+                    <div class="mb-3 flex flex-col md:flex-row md:justify-between md:items-end gap-1 px-1">
+                        <h4 class="font-bold text-white text-lg uppercase drop-shadow-md group-hover:text-skyblue transition-colors duration-300">Suspensão pneumática ativa</h4>
+                        
+                    </div>
+                    
+                    <!-- Área da Imagem -->
+                    <div class="relative overflow-hidden rounded-2xl border-2 border-skyblue/30 group-hover:border-skyblue transition-colors duration-300 h-[300px] bg-black/20 cursor-pointer flex items-center justify-center p-4 shadow-lg">
+                        <img src="IMAGENS/IMAGENS DOS TRABALHOS/PDF convertido para PNG/Figura 10 cortada.png" alt="Suspensão pneumática ativa" class="w-full h-full object-contain transition-transform duration-700 group-hover:scale-105">
+                        
+                        <!-- Overlay do Hover -->
+                        <div class="absolute inset-0 bg-policenavy/95 backdrop-blur-sm flex flex-col justify-center items-center p-6 text-center opacity-0 group-hover:opacity-100 transition-all duration-500 z-10">
+                            <p class="text-sm md:text-base text-gray-200 leading-relaxed text-justify italic">
+                                A suspensão pneumática ativa consiste na utilização de bolsas pneumáticas ou cilindros de fole substituindo as tradicionais molas helicoidais, com o intuito de variar a rigidez de suspensão e variar a altura entre o veículo e o solo.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CARD 3: Suspensão Hidráulica -->
+                <div class="flex flex-col group animate-slide-in-bl">
+                    <!-- Título Externo (Acima do Card) -->
+                    <div class="mb-3 flex flex-col md:flex-row md:justify-between md:items-end gap-1 px-1">
+                        <h4 class="font-bold text-white text-lg uppercase drop-shadow-md group-hover:text-skyblue transition-colors duration-300">Suspensão hidráulica ativa</h4>
+                        
+                    </div>
+                    
+                    <!-- Área da Imagem -->
+                    <div class="relative overflow-hidden rounded-2xl border-2 border-skyblue/30 group-hover:border-skyblue transition-colors duration-300 h-[300px] bg-black/20 cursor-pointer flex items-center justify-center p-4 shadow-lg">
+                        <img src="IMAGENS/IMAGENS DOS TRABALHOS/PDF convertido para PNG/Figura 11 cortada.png" alt="Suspensão hidráulica ativa" class="w-full h-full object-contain transition-transform duration-700 group-hover:scale-105">
+                        
+                        <!-- Overlay do Hover -->
+                        <div class="absolute inset-0 bg-policenavy/95 backdrop-blur-sm flex flex-col justify-center items-center p-6 text-center opacity-0 group-hover:opacity-100 transition-all duration-500 z-10">
+                            <p class="text-sm md:text-base text-gray-200 leading-relaxed text-justify italic">
+                                A suspensão hidráulica utiliza um atuador hidráulico por torre de suspensão assim podendo variar rigidez e a altura entre o veículo e o solo.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CARD 4: Barra Estabilizadora -->
+                <div class="flex flex-col group animate-slide-in-br">
+                    <!-- Título Externo (Acima do Card) -->
+                    <div class="mb-3 flex flex-col md:flex-row md:justify-between md:items-end gap-1 px-1">
+                        <h4 class="font-bold text-white text-lg uppercase drop-shadow-md group-hover:text-skyblue transition-colors duration-300">Barra estabilizadora hidráulica ativa</h4>
+                        
+                    </div>
+                    
+                    <!-- Área da Imagem -->
+                    <div class="relative overflow-hidden rounded-2xl border-2 border-skyblue/30 group-hover:border-skyblue transition-colors duration-300 h-[300px] bg-black/20 cursor-pointer flex items-center justify-center p-4 shadow-lg">
+                        <img src="IMAGENS/IMAGENS DOS TRABALHOS/PDF convertido para PNG/Figura 12 cortada.png" alt="Barra estabilizadora hidráulica ativa" class="w-full h-full object-contain transition-transform duration-700 group-hover:scale-105">
+                        
+                        <!-- Overlay do Hover -->
+                        <div class="absolute inset-0 bg-policenavy/95 backdrop-blur-sm flex flex-col justify-center items-center p-6 text-center opacity-0 group-hover:opacity-100 transition-all duration-500 z-10">
+                            <p class="text-sm md:text-base text-gray-200 leading-relaxed text-justify italic">
+                                Esta solução consiste na utilização de uma barra estabilizadora, bieletas e um atuador hidráulico rotativo.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <!-- ================= FIM: SOLUÇÃO - BENCHMARKING ================= -->
+
+
+
+            <div class="reveal-trigger pb-10">
+                <div class="flex items-center mb-10">
+                    <i class="fa-solid fa-code-compare text-safetyyellow text-4xl mr-4 animate-icon-shrink"></i>
+                    <h3 class="text-3xl font-bold animate-reveal-from-icon uppercase">Solução - Matriz de Decisão</h3>
+                </div>
+                <div
+                    class="relative bg-white/5 backdrop-blur-lg rounded-3xl p-8 border border-white/10 shadow-2xl overflow-hidden">
+                    <p class="text-lg text-gray-200 animate-fade-up leading-relaxed text-justify mb-8 italic">Para
+                        visualizar qual solução tem o maior potencial de resolução do problema, e a maior aderência com
+                        as necessidades determinadas pelo estudo, foi utilizada uma matriz de decisão construida através
+                        do
+                        método AHP. O ESC foi selecionado como referência comparativa. Na
+                        comparação foram utilizados critérios como: capacidade de atuar na rolagem, interferência na
+                        dirigibilidade
+                        e/ou velocidade da viatura, entre outros conforme tabela 4. Além dos parâmetros de comparação,
+                        foi utilizado
+                        um sistema de pontuação variando de -2 a 2, com descrições definidas, conforme tabela 3.</p>
+
+                    <!-- ================================================================ -->
+        <!-- INÍCIO: TABELAS 3 e 4 - Benchmarking -->
+        <!-- ================================================================ -->
+        <div class="space-y-16">
+            
+            <!-- TABELA 3 -->
+            <div>
+                <h3 class="text-xl font-bold text-white mb-4 text-center">Tabela 3: Sistema de Pontuação Matriz de Decisão</h3>
+                <div class="flex justify-center">
+                    <!-- Removido pb-4 para o rodapé colar no fundo -->
+                    <div class="bg-skyblue rounded-xl shadow-lg overflow-hidden w-full max-w-2xl">
+                        <table class="w-full text-base md:text-lg text-left border-collapse text-policenavy font-medium">
+                            <thead class="bg-policeblue text-white text-xs uppercase tracking-wider">
+                                <tr>
+                                    <th class="px-6 py-4 text-center w-24">Nota</th>
+                                    <th class="px-6 py-4">Descrição</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="border-b border-policenavy/10 hover:bg-white/10">
+                                    <td class="px-6 py-3 font-bold text-center border-r border-policenavy/10">-2</td>
+                                    <td class="px-6 py-3">Muito pior que o comparativo</td>
+                                </tr>
+                                <tr class="border-b border-policenavy/10 hover:bg-white/10">
+                                    <td class="px-6 py-3 font-bold text-center border-r border-policenavy/10">-1</td>
+                                    <td class="px-6 py-3">Pior que o comparativo</td>
+                                </tr>
+                                <tr class="border-b border-policenavy/10 hover:bg-white/10">
+                                    <td class="px-6 py-3 font-bold text-center border-r border-policenavy/10">0</td>
+                                    <td class="px-6 py-3">Neutro em relação ao comparativo</td>
+                                </tr>
+                                <tr class="border-b border-policenavy/10 hover:bg-white/10">
+                                    <td class="px-6 py-3 font-bold text-center border-r border-policenavy/10">1</td>
+                                    <td class="px-6 py-3">Melhor que o comparativo</td>
+                                </tr>
+                                <tr class="hover:bg-white/10">
+                                    <td class="px-6 py-3 font-bold text-center border-r border-policenavy/10">2</td>
+                                    <td class="px-6 py-3">Muito melhor que o comparativo</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <!-- Novo rodapé com fundo escurecido -->
+                        <div class="bg-policenavy/10 border-t border-policenavy/20 px-6 py-3 text-right text-xs font-bold text-policenavy">
+                            Fonte: Autores, 2025.
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- TABELA 4 -->
+            <div>
+                <h3 class="text-xl font-bold text-white mb-4">Tabela 4: Matriz de Decisão</h3>
+                <!-- Removido pb-4 para o rodapé colar no fundo -->
+                <div class="bg-skyblue rounded-xl shadow-lg overflow-hidden">
+                    <div class="overflow-x-auto custom-scrollbar">
+                        <table class="w-full text-xs md:text-sm text-center border-collapse min-w-[1000px]">
+                            <thead class="bg-policeblue text-white font-semibold text-xs tracking-wider">
+                                <!-- Linha 1 do Header -->
+                                <tr>
+                                    <th rowspan="2" class="border-b border-r border-white/20 px-2 py-4 w-48 uppercase">Parâmetros</th>
+                                    <th rowspan="2" class="border-b border-r border-white/20 px-2 py-4 uppercase">Peso</th>
+                                    <th colspan="2" class="border-b border-r border-white/20 px-2 py-3 bg-darkcherry/80 uppercase">Solução Referência<br><span class="text-[10px] font-normal normal-case">Controle Eletrônico (ESC)</span></th>
+                                    <th colspan="2" class="border-b border-r border-white/20 px-2 py-3 uppercase">Solução A<br><span class="text-[10px] font-normal normal-case">Susp. Pneumática Ativa</span></th>
+                                    <th colspan="2" class="border-b border-r border-white/20 px-2 py-3 uppercase">Solução B<br><span class="text-[10px] font-normal normal-case">Susp. Hidráulica Ativa</span></th>
+                                    <th colspan="2" class="border-b border-white/20 px-2 py-3 uppercase">Solução C<br><span class="text-[10px] font-normal normal-case">Barra Estabilizadora Ativa</span></th>
+                                </tr>
+                                <!-- Linha 2 do Header -->
+                                <tr class="bg-policenavy/50">
+                                    <th class="border-b border-r border-white/20 px-1 py-2">Nota</th>
+                                    <th class="border-b border-r border-white/20 px-1 py-2">Nota Ajustada</th>
+                                    <th class="border-b border-r border-white/20 px-1 py-2">Nota</th>
+                                    <th class="border-b border-r border-white/20 px-1 py-2">Nota Ajustada</th>
+                                    <th class="border-b border-r border-white/20 px-1 py-2">Nota</th>
+                                    <th class="border-b border-r border-white/20 px-1 py-2">Nota Ajustada</th>
+                                    <th class="border-b border-r border-white/20 px-1 py-2">Nota</th>
+                                    <th class="border-b border-white/20 px-1 py-2">Nota Ajustada</th>
+                                </tr>
+                            </thead>
+                            <tbody class="text-policenavy font-medium">
+                                <tr class="border-b border-policenavy/10 hover:bg-white/10">
+                                    <td class="border-r border-policenavy/10 px-3 py-3 text-left">Atuar na rolagem do veículo</td>
+                                    <td class="border-r border-policenavy/10 px-2 py-3">31,10%</td>
+                                    <td class="border-r border-policenavy/10 px-2 py-3 bg-policenavy/5">-</td>
+                                    <td class="border-r border-policenavy/10 px-2 py-3 bg-policenavy/5">-</td>
+                                    <td class="border-r border-policenavy/10 px-2 py-3">2,00</td>
+                                    <td class="border-r border-policenavy/10 px-2 py-3">0,62</td>
+                                    <td class="border-r border-policenavy/10 px-2 py-3">2,00</td>
+                                    <td class="border-r border-policenavy/10 px-2 py-3">0,62</td>
+                                    <td class="border-r border-policenavy/10 px-2 py-3">2,00</td>
+                                    <td class="px-2 py-3">0,62</td>
+                                </tr>
+                                <tr class="border-b border-policenavy/10 hover:bg-white/10">
+                                    <td class="border-r border-policenavy/10 px-3 py-3 text-left">Interferência na Dirigibilidade</td>
+                                    <td class="border-r border-policenavy/10 px-2 py-3">16,90%</td>
+                                    <td class="border-r border-policenavy/10 px-2 py-3 bg-policenavy/5">-</td>
+                                    <td class="border-r border-policenavy/10 px-2 py-3 bg-policenavy/5">-</td>
+                                    <td class="border-r border-policenavy/10 px-2 py-3">2,00</td>
+                                    <td class="border-r border-policenavy/10 px-2 py-3">0,34</td>
+                                    <td class="border-r border-policenavy/10 px-2 py-3">2,00</td>
+                                    <td class="border-r border-policenavy/10 px-2 py-3">0,34</td>
+                                    <td class="border-r border-policenavy/10 px-2 py-3">2,00</td>
+                                    <td class="px-2 py-3">0,34</td>
+                                </tr>
+                                <tr class="border-b border-policenavy/10 hover:bg-white/10">
+                                    <td class="border-r border-policenavy/10 px-3 py-3 text-left">Interferência na Velocidade</td>
+                                    <td class="border-r border-policenavy/10 px-2 py-3">11,70%</td>
+                                    <td class="border-r border-policenavy/10 px-2 py-3 bg-policenavy/5">-</td>
+                                    <td class="border-r border-policenavy/10 px-2 py-3 bg-policenavy/5">-</td>
+                                    <td class="border-r border-policenavy/10 px-2 py-3">2,00</td>
+                                    <td class="border-r border-policenavy/10 px-2 py-3">0,23</td>
+                                    <td class="border-r border-policenavy/10 px-2 py-3">2,00</td>
+                                    <td class="border-r border-policenavy/10 px-2 py-3">0,23</td>
+                                    <td class="border-r border-policenavy/10 px-2 py-3">2,00</td>
+                                    <td class="px-2 py-3">0,23</td>
+                                </tr>
+                                <tr class="border-b border-policenavy/10 hover:bg-white/10">
+                                    <td class="border-r border-policenavy/10 px-3 py-3 text-left">Tempo de Resposta</td>
+                                    <td class="border-r border-policenavy/10 px-2 py-3">10,50%</td>
+                                    <td class="border-r border-policenavy/10 px-2 py-3 bg-policenavy/5">-</td>
+                                    <td class="border-r border-policenavy/10 px-2 py-3 bg-policenavy/5">-</td>
+                                    <td class="border-r border-policenavy/10 px-2 py-3">-1,00</td>
+                                    <td class="border-r border-policenavy/10 px-2 py-3">-0,11</td>
+                                    <td class="border-r border-policenavy/10 px-2 py-3">-2,00</td>
+                                    <td class="border-r border-policenavy/10 px-2 py-3">-0,21</td>
+                                    <td class="border-r border-policenavy/10 px-2 py-3">-2,00</td>
+                                    <td class="px-2 py-3">-0,21</td>
+                                </tr>
+                                <tr class="border-b border-policenavy/10 hover:bg-white/10">
+                                    <td class="border-r border-policenavy/10 px-3 py-3 text-left">Consumo de Potência</td>
+                                    <td class="border-r border-policenavy/10 px-2 py-3">5,50%</td>
+                                    <td class="border-r border-policenavy/10 px-2 py-3 bg-policenavy/5">-</td>
+                                    <td class="border-r border-policenavy/10 px-2 py-3 bg-policenavy/5">-</td>
+                                    <td class="border-r border-policenavy/10 px-2 py-3">-1,00</td>
+                                    <td class="border-r border-policenavy/10 px-2 py-3">-0,06</td>
+                                    <td class="border-r border-policenavy/10 px-2 py-3">-2,00</td>
+                                    <td class="border-r border-policenavy/10 px-2 py-3">-0,11</td>
+                                    <td class="border-r border-policenavy/10 px-2 py-3">-2,00</td>
+                                    <td class="px-2 py-3">-0,11</td>
+                                </tr>
+                                <tr class="border-b border-policenavy/10 hover:bg-white/10">
+                                    <td class="border-r border-policenavy/10 px-3 py-3 text-left">Massa</td>
+                                    <td class="border-r border-policenavy/10 px-2 py-3">4,90%</td>
+                                    <td class="border-r border-policenavy/10 px-2 py-3 bg-policenavy/5">-</td>
+                                    <td class="border-r border-policenavy/10 px-2 py-3 bg-policenavy/5">-</td>
+                                    <td class="border-r border-policenavy/10 px-2 py-3">-1,00</td>
+                                    <td class="border-r border-policenavy/10 px-2 py-3">-0,05</td>
+                                    <td class="border-r border-policenavy/10 px-2 py-3">-2,00</td>
+                                    <td class="border-r border-policenavy/10 px-2 py-3">-0,10</td>
+                                    <td class="border-r border-policenavy/10 px-2 py-3">-2,00</td>
+                                    <td class="px-2 py-3">-0,10</td>
+                                </tr>
+                                <tr class="border-b border-policenavy/10 hover:bg-white/10">
+                                    <td class="border-r border-policenavy/10 px-3 py-3 text-left">Número de Peças</td>
+                                    <td class="border-r border-policenavy/10 px-2 py-3">5,50%</td>
+                                    <td class="border-r border-policenavy/10 px-2 py-3 bg-policenavy/5">-</td>
+                                    <td class="border-r border-policenavy/10 px-2 py-3 bg-policenavy/5">-</td>
+                                    <td class="border-r border-policenavy/10 px-2 py-3">-1,00</td>
+                                    <td class="border-r border-policenavy/10 px-2 py-3">-0,06</td>
+                                    <td class="border-r border-policenavy/10 px-2 py-3">-1,00</td>
+                                    <td class="border-r border-policenavy/10 px-2 py-3">-0,06</td>
+                                    <td class="border-r border-policenavy/10 px-2 py-3">-1,00</td>
+                                    <td class="px-2 py-3">-0,06</td>
+                                </tr>
+                                <tr class="border-b border-policenavy/10 hover:bg-white/10">
+                                    <td class="border-r border-policenavy/10 px-3 py-3 text-left">Intercambialidade</td>
+                                    <td class="border-r border-policenavy/10 px-2 py-3">8,00%</td>
+                                    <td class="border-r border-policenavy/10 px-2 py-3 bg-policenavy/5">-</td>
+                                    <td class="border-r border-policenavy/10 px-2 py-3 bg-policenavy/5">-</td>
+                                    <td class="border-r border-policenavy/10 px-2 py-3">-1,00</td>
+                                    <td class="border-r border-policenavy/10 px-2 py-3">-0,08</td>
+                                    <td class="border-r border-policenavy/10 px-2 py-3">-1,00</td>
+                                    <td class="border-r border-policenavy/10 px-2 py-3">-0,08</td>
+                                    <td class="border-r border-policenavy/10 px-2 py-3">-2,00</td>
+                                    <td class="px-2 py-3">-0,16</td>
+                                </tr>
+                                <tr class="border-b border-policenavy/10 hover:bg-white/10">
+                                    <td class="border-r border-policenavy/10 px-3 py-3 text-left">Manutenção</td>
+                                    <td class="border-r border-policenavy/10 px-2 py-3">5,90%</td>
+                                    <td class="border-r border-policenavy/10 px-2 py-3 bg-policenavy/5">-</td>
+                                    <td class="border-r border-policenavy/10 px-2 py-3 bg-policenavy/5">-</td>
+                                    <td class="border-r border-policenavy/10 px-2 py-3">0,00</td>
+                                    <td class="border-r border-policenavy/10 px-2 py-3">0,00</td>
+                                    <td class="border-r border-policenavy/10 px-2 py-3">-1,00</td>
+                                    <td class="border-r border-policenavy/10 px-2 py-3">-0,06</td>
+                                    <td class="border-r border-policenavy/10 px-2 py-3">-2,00</td>
+                                    <td class="px-2 py-3">-0,12</td>
+                                </tr>
+                                <tr class="bg-policeblue font-bold text-white text-sm">
+                                    <td class="border-r border-white/20 px-3 py-4 text-right">
+                                        <div class="flex items-center justify-end gap-2">
+                                            <span>TOTAL</span>
+                                        </div>
+                                    </td>
+                                    <td class="border-r border-white/20 px-2 py-4">100,00%</td>
+                                    <td class="border-r border-white/20 px-2 py-4 bg-policenavy/20">-</td>
+                                    <td class="border-r border-white/20 px-2 py-4 bg-policenavy/20">-</td>
+                                    <td class="border-r border-white/20 px-2 py-4">-</td>
+                                    <td class="border-r border-white/20 px-2 py-4 text-skyblue font-black text-base">0,85</td>
+                                    <td class="border-r border-white/20 px-2 py-4">-</td>
+                                    <td class="border-r border-white/20 px-2 py-4">0,58</td>
+                                    <td class="border-r border-white/20 px-2 py-4">-</td>
+                                    <td class="px-2 py-4">0,44</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <!-- Novo rodapé com fundo escurecido -->
+                    <div class="bg-policenavy/10 border-t border-policenavy/20 px-6 py-3 text-right text-xs font-bold text-policenavy">
+                        Fontes: Autores, 2025.
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- ================= FIM: TABELAS 3 e 4 ================= -->
+
+                </div>
+
+                <BR>
+                <BR>
+                <div class="reveal-trigger pb-10">
+                    <div class="flex items-center mb-10">
+                        <i class="fa-solid fa-code-compare text-safetyyellow text-4xl mr-4 animate-icon-shrink"></i>
+                        <h3 class="text-3xl font-bold animate-reveal-from-icon uppercase">Solução - Conclusão</h3>
+                    </div>
+                    <div <div
+                        class="bg-[#eef2f6] rounded-r-2xl border-l-8 border-safetyyellow p-10 shadow-2xl animate-slide-right-from-border">
+
+                        <blockquote class="italic text-policenavy font-bold text-xl leading-relaxed"> Comparando as
+                            soluções, a suspensão pneumática se sobressai, principalmente em relação ao tempo de
+                            resposta e adição de massa relativamente menores do que as outras soluções ativas, enquanto
+                            mantém boa capacidade de atuação na rolagem do veículo.
+                        </blockquote>
+                    </div>
+
+                </div>
+            </div>
+    </section>
+
+    <!-- SEQUÊNCIA -->
+    <section class="bg-white">
+        <div class="w-full overflow-hidden leading-none bg-[#325978]">
+            
+        </div>
+
+         <!-- ================================================================ -->
+        <!-- INÍCIO: SEQUÊNCIA DE FUNCIONAMENTO -->
+        <!-- ================================================================ -->
+        <section class="py-10 md:py-20 bg-policenavy text-white overflow-hidden reveal-trigger">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                
+                <h3 class="text-3xl font-bold text-white mb-16 text-center animate-slide-up-title uppercase">
+                    Solução - Sequência de funcionamento
+                </h3>
+                
+                <div class="relative max-w-3xl mx-auto">
+                    <!-- Linha do tempo (Background claro) -->
+                    <div class="absolute left-[1.3rem] md:left-[2.1rem] top-0 bottom-0 w-1 bg-skyblue/30"></div>
+                    
+                    <div class="space-y-12 relative z-10">
+                        
+                        <!-- Step 1 -->
+                        <div class="flex items-start gap-6 md:gap-8 group">
+                            <!-- Ícone -->
+                            <div class="w-12 h-12 md:w-16 md:h-16 shrink-0 rounded-full bg-policeblue border-2 border-skyblue flex items-center justify-center font-bold text-xl md:text-2xl text-skyblue shadow-[0_0_15px_rgba(167,202,223,0.3)] group-hover:bg-skyblue group-hover:text-policenavy transition-all duration-300 animate-drop-in relative z-10">
+                                1
+                            </div>
+                            <!-- Caixa de Texto -->
+                            <div class="flex-1 bg-policeblue p-6 rounded-2xl border border-skyblue/20 font-bold text-gray-200 shadow-lg group-hover:border-skyblue/60 group-hover:-translate-y-1 transition-all duration-300 animate-slide-out-from-icon mt-0 md:mt-2 text-sm md:text-base">
+                                Veículo inicia manobra de mudança de trajetória
+                            </div>
+                        </div>
+
+                        <!-- Step 2 -->
+                        <div class="flex items-start gap-6 md:gap-8 group">
+                            <div class="w-12 h-12 md:w-16 md:h-16 shrink-0 rounded-full bg-policeblue border-2 border-skyblue flex items-center justify-center font-bold text-xl md:text-2xl text-skyblue shadow-[0_0_15px_rgba(167,202,223,0.3)] group-hover:bg-skyblue group-hover:text-policenavy transition-all duration-300 animate-drop-in relative z-10" style="animation-delay: 100ms;">
+                                2
+                            </div>
+                            <div class="flex-1 bg-policeblue p-6 rounded-2xl border border-skyblue/20 font-bold text-gray-200 shadow-lg group-hover:border-skyblue/60 group-hover:-translate-y-1 transition-all duration-300 animate-slide-out-from-icon mt-0 md:mt-2 text-sm md:text-base" style="animation-delay: 100ms;">
+                                Risco de tombamento reconhecido pelos sensores
+                            </div>
+                        </div>
+
+                        <!-- Step 3 -->
+                        <div class="flex items-start gap-6 md:gap-8 group">
+                            <div class="w-12 h-12 md:w-16 md:h-16 shrink-0 rounded-full bg-policeblue border-2 border-skyblue flex items-center justify-center font-bold text-xl md:text-2xl text-skyblue shadow-[0_0_15px_rgba(167,202,223,0.3)] group-hover:bg-skyblue group-hover:text-policenavy transition-all duration-300 animate-drop-in relative z-10" style="animation-delay: 200ms;">
+                                3
+                            </div>
+                            <div class="flex-1 bg-policeblue p-6 rounded-2xl border border-skyblue/20 font-bold text-gray-200 shadow-lg group-hover:border-skyblue/60 group-hover:-translate-y-1 transition-all duration-300 animate-slide-out-from-icon mt-0 md:mt-2 text-sm md:text-base" style="animation-delay: 200ms;">
+                                Pressurização das bolsas pneumáticas que compõem a suspensão
+                            </div>
+                        </div>
+
+                        <!-- Step 4 -->
+                        <div class="flex items-start gap-6 md:gap-8 group">
+                            <div class="w-12 h-12 md:w-16 md:h-16 shrink-0 rounded-full bg-policeblue border-2 border-skyblue flex items-center justify-center font-bold text-xl md:text-2xl text-skyblue shadow-[0_0_15px_rgba(167,202,223,0.3)] group-hover:bg-skyblue group-hover:text-policenavy transition-all duration-300 animate-drop-in relative z-10" style="animation-delay: 300ms;">
+                                4
+                            </div>
+                            <div class="flex-1 bg-policeblue p-6 rounded-2xl border border-skyblue/20 font-bold text-gray-200 shadow-lg group-hover:border-skyblue/60 group-hover:-translate-y-1 transition-all duration-300 animate-slide-out-from-icon mt-0 md:mt-2 text-sm md:text-base" style="animation-delay: 300ms;">
+                                Consequente aumento na rigidez de suspensão
+                            </div>
+                        </div>
+
+                        <!-- Step Final (Check) -->
+                        <div class="flex items-start gap-6 md:gap-8 group">
+                            <div class="w-12 h-12 md:w-16 md:h-16 shrink-0 rounded-full bg-skyblue border-2 border-skyblue flex items-center justify-center font-bold text-xl md:text-2xl text-policenavy shadow-[0_0_20px_rgba(167,202,223,0.5)] transition-all duration-300 animate-drop-in relative z-10" style="animation-delay: 400ms;">
+                                <i class="fa-solid fa-check"></i>
+                            </div>
+                            <div class="flex-1 bg-policeblue p-6 rounded-2xl border border-skyblue font-bold text-white shadow-lg shadow-skyblue/10 group-hover:-translate-y-1 transition-all duration-300 animate-slide-out-from-icon mt-0 md:mt-2 text-sm md:text-base" style="animation-delay: 400ms;">
+                                Manutenção da viatura em condição segura
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- ================= FIM: SEQUÊNCIA DE FUNCIONAMENTO ================= -->
+            <BR>
+            <BR>
+            <!-- ================================================================ -->
+        <!-- INÍCIO: DIAGRAMA DA SOLUÇÃO (Fundo Branco) -->
+        <!-- ================================================================ -->
+        <section class="w-full py-16 md:py-24 bg-white overflow-hidden reveal-trigger">
+            <!-- Usando o mesmo container max-w-7xl para alinhar perfeitamente com o resto do site -->
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                
+                <!-- Texto Simples, Alinhado e com leve destaque lateral -->
+                <div class="mb-12 animate-fade-up">
+                    <p class="text-policenavy font-bold text-xl md:text-2xl border-l-4 border-safetyyellow pl-4 leading-relaxed">
+                        Abaixo encontra-se um diagrama demonstrando o funcionamento da solução.
+                    </p>
+                </div>
+                
+                <!-- Imagem centralizada e com bordas arredondadas -->
+                <div class="shadow-2xl shadow-policenavy/10 rounded-3xl overflow-hidden bg-white max-w-5xl mx-auto animate-fade-up border border-gray-200">
+                    <img src="/IMAGENS/IMAGENS DOS TRABALHOS/Figura 13 (2).png" alt="Funcionamento da Solução" class="w-full h-auto">
+                </div>
+                
+            
+        
+        <!-- ================= FIM: DIAGRAMA DA SOLUÇÃO ================= -->
+
+
+                <p class="mt-8 text-policenavy transition-all hover:translate-x-2 animate-fade-up">
+                    Para acesso ao Book e apresentação PPT, por gentileza visite a <a href="#documentos"
+                        class="text-safetyyellow font-black underline decoration-2 underline-offset-4">seção de
+                        documentos</a>. <br>
+                    Para contato visite a <a href="#contato"
+                        class="text-safetyyellow font-black underline decoration-2 underline-offset-4">seção de
+                        contato</a>.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- DOCUMENTOS -->
+    <section id="documentos" class="py-24 bg-skyblue relative">
+        <div
+            class="absolute inset-0 pointer-events-none shadow-[inset_0_50px_40px_-30px_rgba(0,0,0,0.4),inset_0_-50px_40px_-30px_rgba(0,0,0,0.4)]">
+        </div>
+        <div class="max-w-5xl mx-auto px-4 text-center reveal-trigger relative z-10">
+            <h2 class="text-3xl font-bold text-policenavy mb-10 animate-slide-up-title uppercase">Acervo de Documentos
+            </h2>
+            <p class="text-policenavy/80 font-bold mb-12 animate-fade-up">Acesse o material completo da pesquisa,
+                incluindo o Book detalhado e a apresentação de slides.</p>
+            <div class="flex flex-col sm:flex-row justify-center gap-10 animate-fade-up">
+                <a href="#documentos"
+                    class="group flex flex-col items-center p-12 bg-white/60 backdrop-blur-md rounded-3xl shadow-xl hover:scale-105 transition-all w-full sm:w-1/2">
+                    <div
+                        class="w-20 h-20 bg-policenavy text-white rounded-full flex items-center justify-center text-4xl mb-6 shadow-lg group-hover:bg-safetyyellow transition-colors">
+                        <i class="fa-solid fa-book"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-policenavy">Book do Projeto</h3>
+                </a>
+                <a href="#documentos"
+                    class="group flex flex-col items-center p-12 bg-white/60 backdrop-blur-md rounded-3xl shadow-xl hover:scale-105 transition-all w-full sm:w-1/2">
+                    <div
+                        class="w-20 h-20 bg-policenavy text-white rounded-full flex items-center justify-center text-4xl mb-6 shadow-lg group-hover:bg-safetyyellow transition-colors">
+                        <i class="fa-solid fa-file-powerpoint"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-policenavy">Apresentação</h3>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- EQUIPE -->
+    <section id="equipe" class="py-24 bg-white overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 text-center reveal-trigger">
+            <h2 class="text-3xl font-bold text-policenavy mb-16 animate-slide-up-title uppercase">A Equipe</h2>
+            <div
+                class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 xl:gap-8 justify-items-center">
+                <!-- Membros mantendo o efeito VAZADO -->
+                <div class="animate-fade-up w-full max-w-[240px] reveal-trigger">
+                    <div
+                        class="relative w-full h-[340px] bg-transparent rounded-t-full rounded-b-xl overflow-hidden group hover:-translate-y-2 transition-transform duration-300">
+                        <div
+                            class="absolute top-0 left-0 w-[40%] h-full bg-policenavy flex items-center justify-center shadow-inner">
+                            <span class="-rotate-90 text-white font-black text-[70px] select-none">SAVE</span>
+                        </div>
+                        <div
+                            class="absolute bottom-0 left-0 w-full h-full z-10 flex items-end justify-center pointer-events-none">
+                            <a href="https://linkedin.com/" target="_blank"
+                                class="h-[75%] w-auto pointer-events-auto hover:scale-105 transition-transform"><img
+                                    src="https://bananapedia.wiki.gg/images/thumb/BR_Miku.png/300px-BR_Miku.png?b6d838"
+                                    class="h-full w-auto object-cover object-bottom drop-shadow-2xl"></a>
+                        </div>
+                        <div
+                            class="absolute bottom-0 left-0 w-full h-[60%] bg-gradient-to-t from-policenavy via-policenavy/90 to-transparent z-20 pointer-events-none">
+                        </div>
+                        <div class="absolute bottom-0 left-0 w-full p-6 z-30 text-left pointer-events-none">
+                            <h3 class="text-lg font-black text-white leading-tight">Bruno Silva</h3>
+                            <p class="text-gray-200 text-[10px] uppercase font-bold tracking-widest leading-none">Líder
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Replicar para os outros 4 membros conforme o index.html anterior... -->
+                <div class="animate-fade-up w-full max-w-[240px] reveal-trigger" style="transition-delay: 0.1s;">
+                    <div
+                        class="relative w-full h-[340px] bg-transparent rounded-t-full rounded-b-xl overflow-hidden group hover:-translate-y-2 transition-transform duration-300">
+                        <div
+                            class="absolute top-0 left-0 w-[40%] h-full bg-policenavy flex items-center justify-center shadow-inner">
+                            <span class="-rotate-90 text-white font-black text-[70px] select-none">SAVE</span>
+                        </div>
+                        <div
+                            class="absolute bottom-0 left-0 w-full h-full z-10 flex items-end justify-center pointer-events-none">
+                            <a href="https://linkedin.com/" target="_blank"
+                                class="h-[75%] w-auto pointer-events-auto hover:scale-105 transition-transform"><img
+                                    src="https://bananapedia.wiki.gg/images/thumb/BR_Miku.png/300px-BR_Miku.png?b6d838"
+                                    class="h-full w-auto object-cover object-bottom"></a>
+                        </div>
+                        <div
+                            class="absolute bottom-0 left-0 w-full h-[60%] bg-gradient-to-t from-policenavy via-policenavy/90 to-transparent z-20 pointer-events-none">
+                        </div>
+                        <div class="absolute bottom-0 left-0 w-full p-6 z-30 text-left pointer-events-none">
+                            <h3 class="text-lg font-black text-white leading-tight">Breno Dellanez</h3>
+                            <p class="text-gray-200 text-[9px] uppercase font-bold tracking-widest leading-none">Análise
+                                & Prototipagem</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="animate-fade-up w-full max-w-[240px] reveal-trigger" style="transition-delay: 0.2s;">
+                    <div
+                        class="relative w-full h-[340px] bg-transparent rounded-t-full rounded-b-xl overflow-hidden group hover:-translate-y-2 transition-transform duration-300">
+                        <div
+                            class="absolute top-0 left-0 w-[40%] h-full bg-policenavy flex items-center justify-center shadow-inner">
+                            <span class="-rotate-90 text-white font-black text-[70px] select-none">SAVE</span>
+                        </div>
+                        <div
+                            class="absolute bottom-0 left-0 w-full h-full z-10 flex items-end justify-center pointer-events-none">
+                            <a href="https://linkedin.com/" target="_blank"
+                                class="h-[75%] w-auto pointer-events-auto hover:scale-105 transition-transform"><img
+                                    src="https://bananapedia.wiki.gg/images/thumb/BR_Miku.png/300px-BR_Miku.png?b6d838"
+                                    class="h-full w-auto object-cover object-bottom"></a>
+                        </div>
+                        <div
+                            class="absolute bottom-0 left-0 w-full h-[60%] bg-gradient-to-t from-policenavy via-policenavy/90 to-transparent z-20 pointer-events-none">
+                        </div>
+                        <div class="absolute bottom-0 left-0 w-full p-6 z-30 text-left pointer-events-none">
+                            <h3 class="text-lg font-black text-white leading-tight">Jefferson Cardoso</h3>
+                            <p class="text-gray-200 text-[9px] uppercase font-bold tracking-widest leading-none">
+                                Apresentação & Simulação</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="animate-fade-up w-full max-w-[240px] reveal-trigger" style="transition-delay: 0.3s;">
+                    <div
+                        class="relative w-full h-[340px] bg-transparent rounded-t-full rounded-b-xl overflow-hidden group hover:-translate-y-2 transition-transform duration-300">
+                        <div
+                            class="absolute top-0 left-0 w-[40%] h-full bg-policenavy flex items-center justify-center shadow-inner">
+                            <span class="-rotate-90 text-white font-black text-[70px] select-none">SAVE</span>
+                        </div>
+                        <div
+                            class="absolute bottom-0 left-0 w-full h-full z-10 flex items-end justify-center pointer-events-none">
+                            <a href="https://linkedin.com/" target="_blank"
+                                class="h-[75%] w-auto pointer-events-auto hover:scale-105 transition-transform"><img
+                                    src="https://bananapedia.wiki.gg/images/thumb/BR_Miku.png/300px-BR_Miku.png?b6d838"
+                                    class="h-full w-auto object-cover object-bottom"></a>
+                        </div>
+                        <div
+                            class="absolute bottom-0 left-0 w-full h-[60%] bg-gradient-to-t from-policenavy via-policenavy/90 to-transparent z-20 pointer-events-none">
+                        </div>
+                        <div class="absolute bottom-0 left-0 w-full p-6 z-30 text-left pointer-events-none">
+                            <h3 class="text-lg font-black text-white leading-tight">Pietro Giraldi</h3>
+                            <p class="text-gray-200 text-[9px] uppercase font-bold tracking-widest leading-none">
+                                Modelagem & Simulação</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="animate-fade-up w-full max-w-[240px] reveal-trigger" style="transition-delay: 0.4s;">
+                    <div
+                        class="relative w-full h-[340px] bg-transparent rounded-t-full rounded-b-xl overflow-hidden group hover:-translate-y-2 transition-transform duration-300">
+                        <div
+                            class="absolute top-0 left-0 w-[40%] h-full bg-policenavy flex items-center justify-center shadow-inner">
+                            <span class="-rotate-90 text-white font-black text-[70px] select-none">SAVE</span>
+                        </div>
+                        <div
+                            class="absolute bottom-0 left-0 w-full h-full z-10 flex items-end justify-center pointer-events-none">
+                            <a href="https://linkedin.com/" target="_blank"
+                                class="h-[75%] w-auto pointer-events-auto hover:scale-105 transition-transform"><img
+                                    src="https://bananapedia.wiki.gg/images/thumb/BR_Miku.png/300px-BR_Miku.png?b6d838"
+                                    class="h-full w-auto object-cover object-bottom"></a>
+                        </div>
+                        <div
+                            class="absolute bottom-0 left-0 w-full h-[60%] bg-gradient-to-t from-policenavy via-policenavy/90 to-transparent z-20 pointer-events-none">
+                        </div>
+                        <div class="absolute bottom-0 left-0 w-full p-6 z-30 text-left pointer-events-none">
+                            <h3 class="text-lg font-black text-white leading-tight">Vitor Loge</h3>
+                            <p class="text-gray-200 text-[9px] uppercase font-bold tracking-widest leading-none">Cad 3D
+                                & Prototipagem</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTATO -->
+    <section id="contato" class="py-24 bg-policenavy text-white">
+        <div class="max-w-4xl mx-auto px-4 reveal-trigger text-center">
+            <h2 class="text-4xl font-bold mb-12 animate-slide-up-title uppercase">Contato Preliminar</h2>
+            <form class="space-y-6 bg-white/5 p-10 rounded-3xl border border-white/10 animate-fade-up shadow-2xl">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 text-left">
+                    <div><label class="block text-sm font-bold text-gray-400 mb-2 uppercase tracking-widest">Nome
+                            Completo</label><input type="text"
+                            class="w-full px-5 py-4 rounded-xl bg-policenavy border border-white/20 text-white focus:ring-2 focus:ring-safetyyellow outline-none transition-all">
+                    </div>
+                    <div><label
+                            class="block text-sm font-bold text-gray-400 mb-2 uppercase tracking-widest">E-mail</label><input
+                            type="email"
+                            class="w-full px-5 py-4 rounded-xl bg-policenavy border border-white/20 text-white focus:ring-2 focus:ring-safetyyellow outline-none transition-all">
+                    </div>
+                </div>
+                <div class="text-left"><label
+                        class="block text-sm font-bold text-gray-400 mb-2 uppercase tracking-widest">Mensagem</label><textarea
+                        rows="4"
+                        class="w-full px-5 py-4 rounded-xl bg-policenavy border border-white/20 text-white focus:ring-2 focus:ring-safetyyellow outline-none transition-all"></textarea>
+                </div>
+                <button type="button"
+                    class="w-full bg-safetyyellow text-white font-black py-5 rounded-xl hover:bg-darkcherry transition-colors uppercase tracking-widest shadow-xl">Enviar
+                    Mensagem</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-gray-900 text-gray-500 py-12 text-center">
+        <p class="text-xs uppercase tracking-widest font-bold">© 2026 Projeto SAVE. Engenharia Mecânica FEI. Todos os
+            direitos reservados.</p>
+    </footer>
+
+    <!-- VOLTAR AO TOPO -->
+    <a href="#inicio" id="btn-back-to-top"
+        class="fixed bottom-8 right-8 w-16 h-16 bg-gray-300 rounded-full flex items-center justify-center hover:bg-safetyyellow hover:scale-110 transition-all shadow-2xl opacity-0 invisible z-50">
+        <i class="fa-solid fa-arrow-up text-2xl text-gray-600 group-hover:text-darkcherry"></i>
+    </a>
+
+    <script>
+        const btnTop = document.getElementById('btn-back-to-top');
+        window.addEventListener('scroll', () => {
+            const nav = document.getElementById('navbar');
+            nav.classList.toggle('scrolled', window.scrollY > 20);
+            if (window.scrollY > 400) { btnTop.classList.add('opacity-100', 'visible'); btnTop.classList.remove('opacity-0', 'invisible'); }
+            else { btnTop.classList.remove('opacity-100', 'visible'); btnTop.classList.add('opacity-0', 'invisible'); }
+        });
+
+        document.getElementById('mobile-menu-btn').onclick = () => document.getElementById('mobile-menu').classList.toggle('hidden');
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        setTimeout(() => {
+                            const anims = ['.animate-fade-up', '.animate-slide-left', '.animate-slide-right-from-border', '.animate-shrink-bar', '.animate-shrink-bar-left', '.animate-slide-up-title', '.animate-slide-right-title', '.animate-icon-shrink', '.animate-reveal-from-icon', '.animate-slide-in-tl', '.animate-slide-in-tr', '.animate-slide-in-bl', '.animate-slide-in-br', '.animate-drop-in', '.animate-slide-out-from-icon'];
+                            anims.forEach(cls => entry.target.querySelectorAll(cls).forEach(el => el.classList.add('is-visible')));
+                            if (entry.target.className.includes('animate-')) entry.target.classList.add('is-visible');
+                        }, 50);
+                    }
+                });
+            }, { threshold: 0.1 });
+            document.querySelectorAll('.reveal-trigger').forEach(sec => observer.observe(sec));
+
+            // CARROSSEL
+            const track = document.getElementById('carousel-track');
+            const container = document.getElementById('image-carousel');
+            const dots = document.querySelectorAll('.carousel-dot');
+            let idx = 0; let timer;
+            const update = () => { if (track) track.style.transform = `translateX(-${idx * 100}%)`; dots.forEach((d, i) => d.classList.toggle('bg-safetyyellow', i === idx)); };
+            const next = () => { idx = (idx + 1) % 2; update(); };
+            const start = () => timer = setInterval(next, 5000);
+            const stop = () => clearInterval(timer);
+            document.getElementById('btn-next').onclick = next;
+            document.getElementById('btn-prev').onclick = () => { idx = (idx - 1 + 2) % 2; update(); };
+            if (container) { container.onmouseenter = stop; container.onmouseleave = start; container.ontouchstart = stop; container.ontouchend = start; }
+            start(); update();
+        });
+    </script>
+</body>
+
+</html>
